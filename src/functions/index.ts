@@ -1,2 +1,3 @@
 export { postPrincesses } from './post-princesses'
-export { findPrincesses } from './find-princesses'
+export { findPrincess } from './find-princess'
+export { deletePrincess } from './delete-princess'

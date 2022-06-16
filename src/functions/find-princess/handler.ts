@@ -4,7 +4,7 @@ import { formatJSONResponse, ValidatedEventAPIGatewayProxyEvent } from '@libs/ap
 import { dynamoDbClient } from '@libs/dynamo-db'
 import { middyfy } from '@libs/lambda'
 
-const findPrincesses: ValidatedEventAPIGatewayProxyEvent = async (event) => {
+const findPrincess: ValidatedEventAPIGatewayProxyEvent = async (event) => {
   const princessId = event.pathParameters.princessId
 
   try {
@@ -21,4 +21,4 @@ const findPrincesses: ValidatedEventAPIGatewayProxyEvent = async (event) => {
   }
 }
 
-export const main = middyfy(findPrincesses)
+export const main = middyfy(findPrincess)
