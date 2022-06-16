@@ -4,6 +4,7 @@
     "paths": {
       "@functions/*": ["src/functions/*"],
       "@constants/*": ["src/constants/*"],
+      "@interfaces/*": ["src/interfaces/*"],
       "@libs/*": ["src/libs/*"]
     }
   }

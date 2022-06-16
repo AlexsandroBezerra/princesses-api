@@ -1,7 +1,9 @@
-import schema from './schema'
 import { handlerPath } from '@libs/handler-resolver'
+import type { FunctionType } from '@interfaces/FunctionType'
 
-export default {
+import schema from './schema'
+
+export const postPrincesses: FunctionType = {
   handler: `${handlerPath(__dirname)}/handler.main`,
   events: [
     {

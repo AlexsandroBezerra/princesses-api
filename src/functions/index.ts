@@ -1,1 +1,1 @@
-export { default as postPrincesses } from './post-princesses'
+export { postPrincesses } from './post-princesses'
