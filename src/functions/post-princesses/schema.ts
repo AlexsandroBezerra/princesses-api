@@ -7,5 +7,5 @@ export default {
     assetUrl: { type: 'string' },
     date: { type: 'string' }
   },
-  required: ['title', 'subtitle', 'history', 'assetUrl', 'date']
+  required: ['title', 'subTitle', 'history', 'assetUrl', 'date']
 } as const
