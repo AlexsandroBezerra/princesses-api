@@ -1,7 +1,7 @@
 import { SECRET } from '@constants/index'
 import type { ValidatedEventAPIGatewayProxyEvent } from './api-gateway'
 
-export const withAuth = <T>(handler: ValidatedEventAPIGatewayProxyEvent<T>): ValidatedEventAPIGatewayProxyEvent<T> => {
+export const withAuth = <T extends unknown = unknown>(handler: ValidatedEventAPIGatewayProxyEvent<T>): ValidatedEventAPIGatewayProxyEvent<T> => {
   return (...params) => {
     const [event] = params
 
