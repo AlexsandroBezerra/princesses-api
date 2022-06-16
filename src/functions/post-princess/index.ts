@@ -3,7 +3,7 @@ import type { FunctionType } from '@interfaces/FunctionType'
 
 import schema from './schema'
 
-export const postPrincesses: FunctionType = {
+export const postPrincess: FunctionType = {
   handler: `${handlerPath(__dirname)}/handler.main`,
   events: [
     {

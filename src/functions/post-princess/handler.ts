@@ -9,7 +9,7 @@ import { TABLE_NAME } from '@constants/index'
 
 import schema from './schema'
 
-const postPrincesses = withAuth<typeof schema>(async (event) => {
+const postPrincess = withAuth<typeof schema>(async (event) => {
   const { title, subTitle, history, assetUrl, date } = event.body
   const princessId = nanoid()
 
@@ -28,4 +28,4 @@ const postPrincesses = withAuth<typeof schema>(async (event) => {
   }
 })
 
-export const main = middyfy(postPrincesses)
+export const main = middyfy(postPrincess)
