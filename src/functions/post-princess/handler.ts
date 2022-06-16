@@ -24,7 +24,7 @@ const postPrincess = withAuth<typeof schema>(async (event) => {
     return formatJSONResponse(princess)
   } catch (err) {
     console.error(err)
-    return formatJSONResponse({ error: 'could not create princess' })
+    return formatJSONResponse({ error: 'could not create princess' }, 500)
   }
 })
 
