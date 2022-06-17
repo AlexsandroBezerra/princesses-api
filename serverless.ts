@@ -1,7 +1,7 @@
 import type { AWS } from '@serverless/typescript'
 
 import * as functions from '@functions/index'
-import { TABLE_NAME } from '@constants/index'
+import * as constants from '@constants/index'
 
 const serverlessConfiguration: AWS = {
   service: 'princess-api',
@@ -15,6 +15,7 @@ const serverlessConfiguration: AWS = {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true
     },
+    environment: { ...constants },
     iam: {
       role: {
         statements: [
@@ -73,7 +74,7 @@ const serverlessConfiguration: AWS = {
             }
           ],
           BillingMode: 'PAY_PER_REQUEST',
-          TableName: TABLE_NAME
+          TableName: constants.TABLE_NAME
         }
       }
     }

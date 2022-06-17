@@ -13,7 +13,7 @@ const deletePrincess = withAuth<{}>(async (event) => {
 
     return formatJSONResponse('', 204)
   } catch (error) {
-    console.log(error)
+    console.error(error)
     return formatJSONResponse({ error: 'could not delete princess' }, 500)
   }
 })

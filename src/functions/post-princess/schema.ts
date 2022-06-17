@@ -5,7 +5,8 @@ export default {
     subTitle: { type: 'string' },
     history: { type: 'string' },
     assetUrl: { type: 'string' },
-    date: { type: 'string' }
+    postedDate: { type: 'string' }
   },
-  required: ['title', 'subTitle', 'history', 'assetUrl', 'date']
+  additionalProperties: false,
+  required: ['title', 'subTitle', 'history', 'assetUrl', 'postedDate']
 } as const

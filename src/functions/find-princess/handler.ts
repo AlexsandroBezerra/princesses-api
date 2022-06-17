@@ -16,7 +16,7 @@ const findPrincess: ValidatedEventAPIGatewayProxyEvent = async (event) => {
 
     return formatJSONResponse({ error: 'princess not found' }, 404)
   } catch (error) {
-    console.log(error)
+    console.error(error)
     return formatJSONResponse({ error: 'could not retrieve princess' }, 500)
   }
 }

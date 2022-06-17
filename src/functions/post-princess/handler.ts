@@ -10,14 +10,14 @@ import { TABLE_NAME } from '@constants/index'
 import schema from './schema'
 
 const postPrincess = withAuth<typeof schema>(async (event) => {
-  const { title, subTitle, history, assetUrl, date } = event.body
+  const { title, subTitle, history, assetUrl, postedDate } = event.body
   const princessId = nanoid()
 
-  if (!isValidDate(date)) {
-    return formatJSONResponse({ error: '"date" provided is not valid' }, 400)
+  if (!isValidDate(postedDate)) {
+    return formatJSONResponse({ error: '"postedDate" provided is not valid' }, 400)
   }
 
-  const princess = { princessId, title, subTitle, history, assetUrl, date }
+  const princess = { princessId, title, subTitle, history, assetUrl, postedDate }
 
   try {
     await dynamoDbClient.put({ TableName: TABLE_NAME, Item: princess }).promise()

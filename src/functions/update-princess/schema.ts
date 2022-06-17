@@ -5,6 +5,7 @@ export default {
     subTitle: { type: 'string' },
     history: { type: 'string' },
     assetUrl: { type: 'string' },
-    date: { type: 'string' }
-  }
+    postedDate: { type: 'string' }
+  },
+  additionalProperties: false
 } as const
